@@ -1,0 +1,70 @@
+<Window x:Class="CrosshairOverlayApp.CrosshairSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CrosshairOverlayApp"
+        Title="Crosshair Settings" Height="500" Width="1000"
+        Background="#333333" Foreground="White">
+  <Window.Resources>
+    <local:FileToBitmapConverter x:Key="FileToBitmapConverter"/>
+  </Window.Resources>
+  <Grid Margin="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>  <!-- Preloaded header -->
+      <RowDefinition Height="Auto"/>  <!-- Preloaded list -->
+      <RowDefinition Height="Auto"/>  <!-- Personal header -->
+      <RowDefinition Height="Auto"/>  <!-- Personal list -->
+      <RowDefinition Height="Auto"/>  <!-- Buttons -->
+    </Grid.RowDefinitions>
+    <!-- Preloaded Crosshairs -->
+    <TextBlock Grid.Row="0" Text="Crosshairs:" FontSize="16" FontWeight="Bold" Margin="10"/>
+    <ListBox x:Name="PreloadedList" Grid.Row="1" Margin="10" Background="#444444" Foreground="White"
+             BorderThickness="0" MouseDoubleClick="Crosshair_MouseDoubleClick"
+             SelectionChanged="Crosshair_SelectionChanged" HorizontalContentAlignment="Left">
+      <ListBox.ItemsPanel>
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+      </ListBox.ItemsPanel>
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal" Margin="5">
+            <Image Source="{Binding FilePath, Converter={StaticResource FileToBitmapConverter}}"
+                   Width="40" Height="40" Stretch="Uniform" Margin="5"/>
+            <TextBlock Text="{Binding FileName}" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12"
+                       TextTrimming="CharacterEllipsis" ToolTip="{Binding FileName}"/>
+          </StackPanel>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+    <!-- Personal Crosshairs -->
+    <TextBlock Grid.Row="2" Text="Personal Crosshairs:" FontSize="16" FontWeight="Bold" Margin="10"/>
+    <ListBox x:Name="PersonalList" Grid.Row="3" Margin="10" Background="#444444" Foreground="White"
+             BorderThickness="0" MouseDoubleClick="Crosshair_MouseDoubleClick"
+             SelectionChanged="Crosshair_SelectionChanged" HorizontalContentAlignment="Left">
+      <ListBox.ItemsPanel>
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+      </ListBox.ItemsPanel>
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal" Margin="5">
+            <Image Source="{Binding FilePath, Converter={StaticResource FileToBitmapConverter}}"
+                   Width="40" Height="40" Stretch="Uniform" Margin="5"/>
+            <TextBlock Text="{Binding FileName}" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12"
+                       TextTrimming="CharacterEllipsis" ToolTip="{Binding FileName}"/>
+          </StackPanel>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+    <!-- Bottom Buttons -->
+    <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+      <Button Content="Add Crosshair" Click="AddCrosshair_Click" Margin="10" Height="40" Width="180"
+              HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+      <Button x:Name="RemoveButton" Content="Remove Selected" Click="RemoveCrosshair_Click" Margin="10" Height="40" Width="180"
+              HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False"/>
+      <Button x:Name="RenameButton" Content="Rename Crosshair" Click="RenameCrosshair_Click" Margin="10" Height="40" Width="180"
+              HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+    </StackPanel>
+  </Grid>
+</Window>
