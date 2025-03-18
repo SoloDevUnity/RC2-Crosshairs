@@ -30,8 +30,8 @@
           <StackPanel Orientation="Horizontal" Margin="5">
             <Image Source="{Binding FilePath, Converter={StaticResource FileToBitmapConverter}}"
                    Width="40" Height="40" Stretch="Uniform" Margin="5"/>
-            <TextBlock Text="{Binding FileName}" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12"
-                       TextTrimming="CharacterEllipsis" ToolTip="{Binding FileName}"/>
+            <TextBlock Text="{Binding FileName}" VerticalAlignment="Center" Margin="5,0,0,0" 
+                       FontSize="12" TextTrimming="CharacterEllipsis" ToolTip="{Binding FileName}"/>
           </StackPanel>
         </DataTemplate>
       </ListBox.ItemTemplate>
@@ -51,8 +51,8 @@
           <StackPanel Orientation="Horizontal" Margin="5">
             <Image Source="{Binding FilePath, Converter={StaticResource FileToBitmapConverter}}"
                    Width="40" Height="40" Stretch="Uniform" Margin="5"/>
-            <TextBlock Text="{Binding FileName}" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12"
-                       TextTrimming="CharacterEllipsis" ToolTip="{Binding FileName}"/>
+            <TextBlock Text="{Binding FileName}" VerticalAlignment="Center" Margin="5,0,0,0" 
+                       FontSize="12" TextTrimming="CharacterEllipsis" ToolTip="{Binding FileName}"/>
           </StackPanel>
         </DataTemplate>
       </ListBox.ItemTemplate>

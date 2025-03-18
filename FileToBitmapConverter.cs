@@ -14,16 +14,18 @@ namespace CrosshairOverlayApp
             {
                 try
                 {
-                    BitmapImage bitmap = new BitmapImage();
-                    using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
+                    // Read the file into a byte array and then into a MemoryStream.
+                    byte[] imageData = File.ReadAllBytes(filePath);
+                    using (var memoryStream = new MemoryStream(imageData))
                     {
+                        BitmapImage bitmap = new BitmapImage();
                         bitmap.BeginInit();
                         bitmap.CacheOption = BitmapCacheOption.OnLoad;
-                        bitmap.StreamSource = stream;
+                        bitmap.StreamSource = memoryStream;
                         bitmap.EndInit();
+                        bitmap.Freeze();
+                        return bitmap;
                     }
-                    bitmap.Freeze();
-                    return bitmap;
                 }
                 catch
                 {

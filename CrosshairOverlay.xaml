@@ -2,8 +2,9 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="CrosshairOverlay" Height="300" Width="300"
-        WindowStyle="None" AllowsTransparency="True" Background="Transparent" Topmost="True">
-    <Grid>
-        <Image x:Name="CrosshairImage" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="None"/>
-    </Grid>
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Topmost="True" ShowInTaskbar="True">
+  <Grid>
+    <Image x:Name="CrosshairImage" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="None"/>
+  </Grid>
 </Window>

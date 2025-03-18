@@ -1,13 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <!-- Change target framework to net8.0-windows7.0 for better CefSharp compatibility -->
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
+    <!-- Force x64 so CefSharp native assemblies are copied correctly -->
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <!-- Embed AppIcon.ico into the exe -->
     <ApplicationIcon>Resources\AppIcon.ico</ApplicationIcon>
-    <!-- Rename the assembly to RC1 -->
+    <!-- Rename the assembly to RC2 -->
     <AssemblyName>RC2</AssemblyName>
+    <!-- Suppress NU1701 warning -->
+    <NoWarn>$(NoWarn);NU1701</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <None Update="Resources/AppIcon.ico">
@@ -22,5 +28,9 @@
     <None Update="Resources/crosshairs/SolosCrosshair.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CefSharp.Wpf" Version="133.4.21" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 </Project>
