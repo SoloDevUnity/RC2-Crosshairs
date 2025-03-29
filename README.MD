@@ -12,7 +12,12 @@ Features
 
 
 
+
+
+
+
 Why Choose RC2?
+
 We strive to be the #1 crosshair app by focusing on:
 
 User Experience – Simple, intuitive interface for quick adjustments.
@@ -24,11 +29,18 @@ No Bloatware – Just the tools you need, nothing extra.
 Join the community today!
 
 
+
+
+
 Download & Installation
 
 WILL ADD GUIDE SOON AND ADD INSTALLER
 
+
+
+
 Support & Feedback
+
 Have questions or suggestions? Contact us at:
 
 💬 Discord: Join Our Community - https://discord.gg/GY7mfxMrvH
