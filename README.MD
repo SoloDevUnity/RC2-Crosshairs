@@ -1,6 +1,7 @@
 Welcome to RC2, the ultimate tool for gamers who want to enhance their aiming precision in FPS games. Our mission is to become the most used crosshair app in the gaming community by providing a customizable, lightweight, and user-friendly experience.
 
 Features
+
 ✅ Game Presets – Pre-configured crosshairs for popular FPS games like CS2, Valorant, Apex Legends, and more.
 
 ✅ Performance Optimized – Minimal impact on system resources for smooth gameplay.
