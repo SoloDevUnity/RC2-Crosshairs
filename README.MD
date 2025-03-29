@@ -2,9 +2,13 @@ Welcome to RC2, the ultimate tool for gamers who want to enhance their aiming pr
 
 Features
 ✅ Game Presets – Pre-configured crosshairs for popular FPS games like CS2, Valorant, Apex Legends, and more.
+
 ✅ Performance Optimized – Minimal impact on system resources for smooth gameplay.
+
 ✅ One-Click Apply – Instantly apply crosshairs without restarting your game.
+
 ✅ Cross-Platform Support – Works on multiple games and resolutions.
+
 
 
 Why Choose RC2?
