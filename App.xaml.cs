@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;  // Add this line at the top
 using System.Threading;
 using System.Windows; // This is for WPF Application
 using WinForms = System.Windows.Forms; // Alias for Windows Forms
@@ -32,7 +33,7 @@ namespace CrosshairOverlayApp
                 // Initialize system tray icon using TrayIcon.ico
                 _trayIcon = new WinForms.NotifyIcon
                 {
-                    Icon = new System.Drawing.Icon("Resources/TrayIcon.ico"),
+                    Icon = new System.Drawing.Icon(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "TrayIcon.ico")),
                     Text = "CrosshairOverlay",
                     Visible = true
                 };

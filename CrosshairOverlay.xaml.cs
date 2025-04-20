@@ -22,7 +22,7 @@ namespace CrosshairOverlayApp
             // Set window icon programmatically using AppIcon.ico
             try
             {
-                Uri iconUri = new Uri("pack://application:,,,/Resources/AppIcon.ico", UriKind.Absolute);
+                Uri iconUri = new Uri("pack://application:,,,/RC2;component/Resources/AppIcon.ico", UriKind.Absolute);
                 this.Icon = BitmapFrame.Create(iconUri);
             }
             catch (Exception ex)
